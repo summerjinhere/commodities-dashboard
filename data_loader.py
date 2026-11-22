@@ -78,7 +78,7 @@ def fetch_data(start_date, end_date):
                 continue
                 
         # Forward fill formatting gaps
-        df_prices = df_prices.fillna(method='ffill')
+        df_prices = df_prices.ffill()
         return df_prices
 
     except Exception as e:
